@@ -4,6 +4,13 @@ import Home from "@/views/Home";
 import Register from "@/views/Register";
 import Login from "@/views/Login";
 import Search from "@/views/Search";
+import MyOrder from "@/views/MyOrder";
+import Pay from "@/views/Pay";
+import PaySuccess from "@/views/PaySuccess";
+import Trade from "@/views/Trade";
+import AddCart from "@/views/AddCart";
+import Cart from "@/views/Cart";
+import Detail from "@/views/Detail";
 Vue.use(VueRouter);
 
 export default new VueRouter({
@@ -23,7 +30,7 @@ export default new VueRouter({
     {
       path: "/search/:keyword",
       component: Search,
-      name:"search"
+      name: "search",
     },
     {
       path: "/login",
@@ -32,6 +39,35 @@ export default new VueRouter({
         isHidden: true,
       },
     },
+    {
+      path: "/myOrder",
+      component: MyOrder,
+    },
+    {
+      path: "/pay",
+      component: Pay,
+    },
+    {
+      path: "/paySuccess",
+      component: PaySuccess,
+    },
+    {
+      path: "/trade",
+      component: Trade,
+    },
+    {
+      path: "/addCart",
+      component: AddCart,
+    },
+    {
+      path: "/cart",
+      component: Cart,
+    },
+    {
+      path: "/detail",
+      component: Detail,
+    },
+
     {
       path: "/",
       redirect: "/home",
