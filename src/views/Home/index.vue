@@ -2202,7 +2202,11 @@ export default {
   mounted() {
     const mySwiper = new Swiper("#mySwiper", {
       loop: true, // 循环模式选项
-      autoplay: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false, // 用户操作swiper之后，是否禁止autoplay
+      },
+
       effect: "cube",
 
       // 如果需要分页器
